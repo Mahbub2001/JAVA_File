@@ -10,7 +10,7 @@ class Student1 {
 
     }
 
-    void Student1(String name, int age, double cgpa) {
+    Student1(String name, int age, double cgpa) {
         this.name = name;
         this.age = age;
         this.cgpa = cgpa;
@@ -36,8 +36,7 @@ class MyPractice2 {
         // int age = sc.nextInt();
         // double cgpa = sc.nextDouble();
         // sc.nextLine(); // Consume the newline character after reading cgpa
-        // arr[i] = new Student1();
-        // arr[i].Student1(name, age, cgpa);
+        // arr[i] = new Student1(name, age, cgpa);
         // newWriter.write(arr[i].toString());
         // }
         // newWriter.close();
@@ -60,8 +59,7 @@ class MyPractice2 {
                 String name = fileReader.nextLine();
                 int age = fileReader.nextInt();
                 double cg = fileReader.nextDouble();
-                arr1[i] = new Student1();
-                arr1[i].Student1(name, age, cg);
+                arr1[i] = new Student1(name, age, cg);
                 System.out.println(arr1[i].toString());
                 if (fileReader.hasNextLine()) {
                     fileReader.nextLine();
@@ -78,7 +76,8 @@ class MyPractice2 {
                     }
                 }
             for (i = 0; i < n; i++)
-                outFile.write(arr1[i].name + "\n" + arr1[i].age + "\n" + arr1[i].cgpa + "\n");
+                outFile.write(arr1[i].name + "\n" + arr1[i].age + "\n" + arr1[i].cgpa +
+                        "\n");
 
             outFile.close();
             fileReader.close();
